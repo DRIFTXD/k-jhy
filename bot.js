@@ -35,7 +35,7 @@ var ti={}
 
 client.on('ready', function(){
     var ms = 60000 ;
-    var setGame = ['ahelp I DRIFTXD - دريفت','Type ahelp'];
+    var setGame = ['ahelp I DRIFTXD - دريفت','http://lord-bot.ml/'];
     var i = -1;
     var j = 0;
     setInterval(function (){
