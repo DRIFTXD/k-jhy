@@ -1,4 +1,4 @@
-﻿const Discord = require('discord.js');
+const Discord = require('discord.js');
 const devs = ['389090790984515594'];
 const db = require('quick.db');
 const premium = ['470896018603376640']
@@ -35,7 +35,7 @@ var ti={}
 
 client.on('ready', function(){
     var ms = 60000 ;
-    var setGame = ['$help','اكتب $help I DRIFTXD'];
+    var setGame = ['ahelp','Type ahelp'];
     var i = -1;
     var j = 0;
     setInterval(function (){
@@ -283,8 +283,7 @@ client.on('message', function(msg) {
       .addField('`Online Members`',`[${msg.guild.members.filter(m=>m.presence.status == 'online').size}]`,true)
       .addField('`Text Channels`',`[${msg.guild.channels.filter(m => m.type === 'text').size}]`,true)
       .addField('`Voice Channels`',`[${msg.guild.channels.filter(m => m.type === 'voice').size}]`,true)
-      .addField('`Server 
-`',`**${msg.guild.owner}**`,true)
+      .addField('`Server Owner`',`**${msg.guild.owner}**`,true)
       .addField('`Server Id`',`**${msg.guild.id}**`,true)
       .addField('`Server was created in`',msg.guild.createdAt.toLocaleString())
       msg.channel.send({embed:embed})
@@ -297,7 +296,7 @@ client.on('message', function(msg) {
             .setAuthor(client.user.username,client.user.avatarURL)
             .setThumbnail(client.user.avatarURL)
             .setColor('RANDOM')
-            .setTitle('``INFO Lord-Bot ©`` ')
+            .setTitle('``INFO 3bker Community ©`` ')
             .addField('``My Ping``' , [`${Date.now() - message.createdTimestamp}` + 'MS'], true)
             .addField('``RAM Usage``', `[${(process.memoryUsage().rss / 1048576).toFixed()}MB]`, true)
             .addField('``servers``', [client.guilds.size], true)
@@ -305,9 +304,9 @@ client.on('message', function(msg) {
             .addField('``Users``' ,`[ ${client.users.size} ]` , true)
             .addField('``My Name``' , `[ ${client.user.tag} ]` , true)
             .addField('``My ID``' , `[ ${client.user.id} ]` , true)
-			      .addField('``My Prefix``' , `[ $ ]` , true)
+			      .addField('``My Prefix``' , `[ ! ]` , true)
 			      .addField('``My Language``' , `[ Java Script ]` , true)
-			      .setFooter('By | DRIFTXD')
+			      .setFooter('By | 3bker')
     })
 }
 });
